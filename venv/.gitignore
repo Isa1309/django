@@ -1,0 +1,4 @@
+# created by virtualenv automatically
+.venv
+.book_images
+.db.sqlite3

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+</head>
+<body>
+<div>
+    <h2>{{ object.title }}</h2>
+    <center>{{ object.description }}</center>
+    <img src="{{ object.image.url }}" style="width: 600px; height: 500px" alt="">
+    <br><br><br><br>
+    <h2><a href="/{{ object.pk }}/update/">Update</a></h2>
+    <h2><a href="/{{ object.pk }}/delete/">Delete</a></h2>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books List</title>
+</head>
+<body>
+<h1 style="text-align: center">
+    Everyone Welcome!
+</h1>
+<div>
+    <ul style="list-style: none; text-align: center">
+        {% for i in book %}
+        <li>
+            <div>
+                <h2><a href="/{{ i.pk }}/">{{ i.title }}</a></h2>
+                <p>
+                    <img src="{{ i.image.url }}" style="width: 600px; height: 500px" alt="">
+                </p>
+                <span>Описание: {{ i.description }}</span><br><span>Автор: {{ i.author }}</span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
