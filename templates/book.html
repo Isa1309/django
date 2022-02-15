@@ -11,15 +11,17 @@
 <div>
     <ul style="list-style: none; text-align: center">
         {% for i in book %}
-        <li>
-            <div>
-                <h2><a href="/{{ i.pk }}/">{{ i.title }}</a></h2>
-                <p>
-                    <img src="{{ i.image.url }}" style="width: 600px; height: 500px" alt="">
-                </p>
-                <span>Описание: {{ i.description }}</span><br><span>Автор: {{ i.author }}</span>
-            </div>
-        </li>
+
+            <a href="/create/"> <input type="submit" value="Create Book"></a>
+            <li>
+                <div>
+                    <h2><a href="/{{ i.pk }}/">{{ i.title }}</a></h2>
+                    <p>
+                        <img src="{{ i.image.url }}" style="width: 600px; height: 500px" alt="">
+                    </p>
+                    <span>Описание: {{ i.description }}</span><br><span>Автор: {{ i.author }}</span>
+                </div>
+            </li>
         {% endfor %}
     </ul>
 </div>
